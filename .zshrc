@@ -13,12 +13,13 @@ alias ll='ls -alhF'
 alias la='ls -Ah'
 alias lr='ls -Rh'
 alias l='ls -CFh'
-alias llra="ll -R "${PWD}"/*"
+alias llra="ll -R"
 
 # Demande confirmation avant d'écraser un fichier
-alias cp='cp --interactive'
+# et prise en compte de répertoires
+alias cp='cp --interactive -r'
 alias mv='mv --interactive'
-alias rm='rm --interactive'
+alias rm='rm --interactive -r'
 
 # Quelques alias pratiques
 alias c='clear'
@@ -29,13 +30,21 @@ alias du='du --human-readable'
 alias m='mutt -y'
 alias md='mkdir'
 alias rd='rmdir'
-alias upgrade='apt-get update && apt-get upgrade && apt-get clean'
+alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get clean'
+alias pd="popd"
+alias nd="pushd"
+
 alias vim="vim -p"
 alias view="view -p"
 alias svim="sudo vim"
 alias vd="vimdiff"
-alias pd="popd"
-alias nd="pushd"
+
+alias gs="git status"
+alias ga="git add"
+alias gap="git add -p"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gr="git remove"
 
 # alias for todo.txt
 alias td="${HOME}/dev/scripts/todo.txt-cli/todo.sh -ant -d ${HOME}/.todo/todo.cfg"
@@ -47,6 +56,9 @@ alias qc="${HOME}/dev/scripts/qc.sh"
 
 # alias for swipl (avoid conflicts at compilation)
 alias swipl='export LANG=""; swipl'
+
+# alias rsync
+alias dotsync="rsync -av ~/.zshrc ~/.zshenv ~/.gitconfig ~/.muttrc ~/.dotfiles/"
 
 #######################################
 # 2. Prompt et définition des touches #
