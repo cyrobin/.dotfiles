@@ -1,0 +1,56 @@
+alignment top_right
+background no
+border_width 0
+cpu_avg_samples 2
+default_color ffffff
+default_outline_color black
+default_shade_color black 
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont URW Gothic L:size=9
+#gap_x 35
+#gap_y -10
+minimum_size 430 700
+maximum_size 1920 1080
+net_avg_samples 2
+no_buffers no
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+stippled_borders 0
+update_interval 5.0
+uppercase yes
+use_spacer none
+show_graph_scale no
+show_graph_range no 
+double_buffer yes
+no_buffers yes #display the right percentage of memory
+
+TEXT
+##{{{ TOP CPU
+${offset 65 }${color 333333}${font URW Gothic L:pixelsize=45}CPU $font
+${voffset -20}${color 777777}NAME${goto 200}PID${goto 270}  CPU%${goto 350}MEM%
+${color 999999}${top name 1}${goto 200}${top pid 1}${goto 270}${top cpu 1}${goto 350}${top mem 1}
+${color 999999}${top name 2}${goto 200}${top pid 2}${goto 270}${top cpu 2}${goto 350}${top mem 2}
+${color 999999}${top name 3}${goto 200}${top pid 3}${goto 270}${top cpu 3}${goto 350}${top mem 3}
+${color 999999}${top name 4}${goto 200}${top pid 4}${goto 270}${top cpu 4}${goto 350}${top mem 4}
+${color 999999}${top name 5}${goto 200}${top pid 5}${goto 270}${top cpu 5}${goto 350}${top mem 5}
+##}}}
+
+##{{{ TOP MEM
+${offset 65 }${color 333333}${font URW Gothic L:pixelsize=45}MEM $font
+${voffset -20}${color 777777}NAME${goto 200}PID${goto 270}  CPU%${goto 350}MEM%
+${color 999999}${top_mem name 1}${goto 200}${top_mem pid 1}${goto 270}${top_mem cpu 1}${goto 350}${top_mem mem 1}
+${color 999999}${top_mem name 2}${goto 200}${top_mem pid 2}${goto 270}${top_mem cpu 2}${goto 350}${top_mem mem 2}
+${color 999999}${top_mem name 3}${goto 200}${top_mem pid 3}${goto 270}${top_mem cpu 3}${goto 350}${top_mem mem 3}
+${color 999999}${top_mem name 4}${goto 200}${top_mem pid 4}${goto 270}${top_mem cpu 4}${goto 350}${top_mem mem 4}
+${color 999999}${top_mem name 5}${goto 200}${top_mem pid 5}${goto 270}${top_mem cpu 5}${goto 350}${top_mem mem 5}
+##}}}

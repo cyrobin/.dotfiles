@@ -1,0 +1,67 @@
+alignment bottom_left
+background no
+border_width 0
+cpu_avg_samples 2
+default_color ffffff
+default_outline_color black
+default_shade_color black 
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont URW Gothic L:size=9
+gap_x 25
+gap_y -300
+minimum_size 1200 200
+maximum_size 1920 1080
+net_avg_samples 2
+no_buffers no
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+stippled_borders 0
+update_interval 1.0
+uppercase yes
+use_spacer none
+show_graph_scale no
+show_graph_range no 
+double_buffer yes
+no_buffers yes #display the right percentage of memory
+
+TEXT
+# {{{ system
+${voffset  0 }${offset 0 } ${color 333333}${font URW Gothic L:pixelsize=45}system $font
+${goto 30} ${color aaaaaa}host      ${goto 125} $color $nodename
+#${goto 30} ${color aaaaaa}kernel    ${goto 125} $color $kernel
+${goto 30} ${color aaaaaa}battery   ${goto 125} $color $battery
+${goto 30} ${color aaaaaa}uptime    ${goto 125} $color $uptime 
+# }}}
+
+# {{{ system usage
+${goto 280} ${voffset -103} ${color 333333}${font URW Gothic L:pixelsize=45}usage $font
+${goto 310} ${color aaaaaa}PROCESSOR    ${goto 450} ${color}${cpu} %
+${goto 310} ${color aaaaaa}FREQUENCY    ${goto 450} ${color}${freq} Mhz
+${goto 310} ${color aaaaaa}MEMORY       ${goto 450} ${color}${memperc} %
+### }}}
+
+## {{{ hard drive usage
+${goto 580} ${voffset -103}${color 292929}${font URW Gothic L:pixelsize=45}HDD $font
+${goto 610} ${color aaaaaa}root    ${goto 690} ${color}${fs_bar 7,75 /}
+${goto 610} ${color aaaaaa}home    ${goto 690} ${color}${fs_bar 7,75 /home}
+#${goto 610} ${color aaaaaa}temp    ${goto 690} ${color}${fs_bar 7,75 /tmp}
+#${goto 610} ${color aaaaaa}swap    ${goto 690} ${color}${swapbar 7,75	}
+# }}}
+
+# {{{ music
+${goto 820} ${voffset -100}${color 252525}${font URW Gothic L:pixelsize=45}Music $font
+# CMUS
+${goto 850} ${color aaaaaa}title    ${goto 950} ${exec echo $(cmus-remote -Q 2> /dev/null| grep title  | head -n 1 | cut -d " " -f 3- )}
+${goto 850} ${color aaaaaa}artist   ${goto 950} ${exec echo $(cmus-remote -Q 2> /dev/null| grep artist | head -n 1 | cut -d " " -f 3- )}
+${goto 850} ${color aaaaaa}album    ${goto 950} ${exec echo $(cmus-remote -Q 2> /dev/null| grep album  | head -n 1 | cut -d " " -f 3- )}
+# }}}

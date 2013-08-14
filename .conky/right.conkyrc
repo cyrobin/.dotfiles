@@ -1,0 +1,38 @@
+alignment bottom_right
+background no
+border_width 0
+cpu_avg_samples 2
+default_color ffffff
+default_outline_color black
+default_shade_color black 
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont URW Gothic L:size=9
+gap_x 20
+gap_y 30
+minimum_size 50 30
+net_avg_samples 2
+no_buffers no
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type override
+own_window_transparent yes
+stippled_borders 0
+update_interval 1.0
+uppercase yes
+use_spacer none
+show_graph_scale no
+show_graph_range no 
+double_buffer yes
+
+TEXT
+# {{{ clock
+${offset -10} ${color 333333}${font URW Gothic L:pixelsize=45}${time %A} $font 
+${voffset -25}${font URW Gothic L:pixelsize=45}$alignr $color ${time %H:%M} $font
+# }}}

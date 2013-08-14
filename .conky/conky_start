@@ -1,0 +1,6 @@
+#!/bin/sh
+pkill conky #remove previous instances
+conky -c /home/crobin/.conky/left.conkyrc &
+conky -c /home/crobin/.conky/right.conkyrc &
+conky -c /home/crobin/.conky/top.conkyrc &
+conky -c /home/crobin/.conky/todo.conkyrc &

@@ -1,0 +1,40 @@
+# Conky, a system monitor embedding into the Linux desktop. 
+# -- inspired from Duane Hubbard 
+# https://github.com/duanehubbard/conky-files
+# https://github.com/ginatrapani/todo.txt-cli/wiki/Linux-with-Conky
+#
+alignment top_left
+border_width 0
+default_color Grey
+default_outline_color white
+default_shade_color white
+double_buffer yes
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+gap_x 30
+override_utf8_locale
+own_window yes
+own_window_transparent yes
+# This avoids that the Conky background disappears when clicking on the desktop. 
+own_window_type override
+own_window_class Conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+#text_buffer_size 65536
+text_buffer_size 4096
+use_xft yes
+xftfont URW Gothic L:size=8
+#uppercase yes
+update_interval 120.0
+background no
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+TEXT
+##{{{ Todo.txt display
+${offset 25 }${color 333333}${font URW Gothic L:pixelsize=45}TODO.TXT $font
+
+${voffset 0 }${execpi 120 ~/dev/src/todo.txt-cli/todo.sh -d ~/.todo/todo-conky.cfg ls | head -n 20}
+##}}}
