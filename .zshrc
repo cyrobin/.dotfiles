@@ -439,6 +439,12 @@ export LANGUAGE=en_GB.utf-8
 #export LANG="fr_FR.ISO8859-1"
 #export LANG=""
 
+export PATH="${HOME}/dev/bin:${PATH}"
+export LD_LIBRARY_PATH="${HOME}/dev/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="${HOME}/dev/lib/i386-linux-gnu:${LD_LIBRARY_PATH}"
+export PKG_CONFIG_PATH="${HOME}/dev/lib/pkgconfig:${PKG_CONFIG_PATH}"
+export INCLUDE="${HOME}/dev/include:${INCLUDE}"
+
 ###########################################
 # 7. LAAS Specific Variables              #
 ###########################################
