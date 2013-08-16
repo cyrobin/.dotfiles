@@ -39,12 +39,12 @@ alias view="view -p"
 alias svim="sudo vim"
 alias vd="vimdiff"
 
-alias gs="git status"
-alias ga="git add"
-alias gap="git add -p"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias gr="git remove"
+alias gits="git status"
+alias gita="git add"
+alias gitap="git add -p"
+alias gitc="git commit"
+alias gitcm="git commit -m"
+alias gitr="git remove"
 
 # alias for todo.txt
 alias td="${HOME}/dev/scripts/todo.txt-cli/todo.sh -ant -d ${HOME}/.todo/todo.cfg"
