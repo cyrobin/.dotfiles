@@ -66,8 +66,8 @@ macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
 macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 ## Vim like keybinds
-bind pager j next-line
-bind pager k previous-line
+#bind pager j next-line
+#bind pager k previous-line
 
 # Only if the sidebar is used
 set sidebar_width = 30
