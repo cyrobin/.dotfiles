@@ -58,7 +58,7 @@ alias qc="${HOME}/dev/scripts/qc.sh"
 alias swipl='export LANG=""; swipl'
 
 # alias rsync
-alias dotsync="rsync -av ~/.zshrc ~/.zshenv ~/.gitconfig ~/.muttrc ~/.dotfiles/"
+alias dotsync="rsync -av ~/.zshrc ~/.zshenv ~/.gitconfig ~/.muttrc .todo .conky ~/.dotfiles/"
 
 #######################################
 # 2. Prompt et définition des touches #
