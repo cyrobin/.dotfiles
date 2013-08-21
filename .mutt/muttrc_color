@@ -21,7 +21,7 @@ mono    header      bold    "^(from|subject):"
 color	normal		default default             # default colours
 color   index       brightyellow default ~N     # new messages
 color   index       green default ~F            # flagged messages
-color   index       blue default ~T             # tagged messages
+color   index       cyan default ~T             # tagged messages
 color   index       red default ~D              # deleted messages
 color	attachment	brightmagenta default       # attachments
 color	signature	brightwhite default         # sigs
@@ -60,4 +60,3 @@ color	body	    brightyellow default	"^gpg:          There is no indication that 
 color	body	    brightyellow default	"^gpg: can't handle these multiple signatures"
 color	body	    brightyellow default	"^gpg: signature verification suppressed"
 color	body	    brightyellow default	"^gpg: invalid node with packet of type"
-
