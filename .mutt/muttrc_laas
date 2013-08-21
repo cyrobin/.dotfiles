@@ -1,0 +1,32 @@
+# .muttrc for use with IMAP
+# LAAS Specific settings
+
+# IMAP Settings
+set imap_user = "crobin"
+set imap_pass = ""
+set folder = "imaps://imap.laas.fr/"
+set spoolfile = "imaps://imap.laas.fr/INBOX"
+
+# SMTP Settings
+set smtp_url = "smtps://crobin@mail.laas.fr/"
+set smtp_pass = ""
+set from = "cyril.robin@laas.fr"
+set realname = "Cyril Robin"
+
+set hostname = "laas.fr"
+set postponed = "+Drafts"
+set record = "+Sent"
+
+my_hdr Organization: LAAS/CNRS (Toulouse, France)
+my_hdr bcc: cyril.robin@laas.fr
+
+# Specific macro and keybindings
+macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ,s "<change-folder>=Sent<enter>" "Go to sent box"
+
+# Address Book
+#source ~/.muttalias
+#set alias_file=~/.muttalias
+
+# Shared settings
+source ~/.mutt/muttrc_common

@@ -27,7 +27,6 @@ alias less='less --quiet'
 alias s='cd ..'
 alias df='df --human-readable'
 alias du='du --human-readable'
-alias m='mutt -y'
 alias md='mkdir'
 alias rd='rmdir'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get clean'
@@ -58,7 +57,17 @@ alias qc="${HOME}/dev/scripts/qc.sh"
 alias swipl='export LANG=""; swipl'
 
 # alias rsync
-alias dotsync="rsync -av ~/.zshrc ~/.zshenv ~/.gitconfig ~/.muttrc .todo .conky ~/.dotfiles/"
+alias dotsync="rsync -av \
+    ~/.zshrc ~/.zshenv \
+    ~/.gitconfig \
+    .todo .conky \
+    ~/.mutt --exclude cache/ \
+    ~/.dotfiles/"
+
+# Mutt alias
+alias ml="mutt -F ~/.mutt/muttrc_laas"
+alias mg="mutt -F ~/.mutt/muttrc_gmail"
+#alias m='mutt -y'
 
 #######################################
 # 2. Prompt et définition des touches #

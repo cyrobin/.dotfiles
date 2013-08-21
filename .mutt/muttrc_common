@@ -1,0 +1,102 @@
+# .muttrc for use with IMAP
+# Shared settings
+
+# Editor and utf-8 support
+set charset=UTF8
+set send_charset="iso-8859-1:utf-8"
+set editor=`echo \$EDITOR`
+set tilde
+
+# Basic config 
+set imap_check_subscribed
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+unset markers
+ignore *                               # first, ignore all headers
+unignore From: To: Cc: Date: Subject:  # then, show only these
+hdr_order Date: From: To: Cc: Subject  # in this order
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop 
+set forward_quote
+set forward_format = "Fwd: %s"
+unset mark_old
+set reply_self
+
+# Layout
+set status_chars  = " *%A"
+set status_format = "[ Folder: %f ][%r%m messages%?n? (%n new)?]"
+set pager_context = 5
+set pager_index_lines = 10
+set quit = ask-yes
+
+folder-hook . "exec collapse-all"
+
+# Macro and keybindings
+macro index ,v "<collapse-thread>" "collapse/uncollapse thread"
+macro index ,V "<collapse-all>"    "collapse/uncollapse all threads"
+macro index ,d "<delete-thread>"   "delete all messages in the current thread"
+macro index ,u "<undelete-thread>" "undelete all messages in the current thread"
+macro index ,t "<tag-thread>"      "toggle the tag on the current thread"
+macro index ,r \
+  "<tag-pattern>all<return><tag-prefix><clear-flag>N<untag-pattern>all<return>" \
+  "mark all as read (collapsed)"
+macro index ,R "<collapse-all>,r<collapse-all>" "mark all as read"
+
+# Color and readability
+#color index brightyellow default "~N"       # new messages
+#color index red default "~D"                # deleted messages
+#color attachment magenta default            # attachments
+#color body brightgreen default "(ftp|http|https)://[^ ]+"       # point out URLs
+#color body brightmagenta default [-a-z_0-9.]+@[-a-z_0-9.]+ # e-mail addresses
+#color bold brightblue default               # boldface text
+#color error brightwhite red                 # error messages
+#color hdrdefault cyan default               # default color of message header
+#color header brightcyan default ^(From):    # From header
+#color header brightwhite default ^(Subject): # Subject header
+#color header brightwhite default ^(Date):   # Date header
+##color header white default ^(In-Reply-To):
+##color indicator brightred default           # indicator bar
+#color markers brightblue default            # wrapped line markers (+)
+#color message brightblack green             # status messages
+#color normal default default                # default
+#color quoted green default                  # quoted text, 1st quote level
+#color quoted1 yellow default                # quoted text, 2nd quote level
+#color quoted2 cyan default                  # quoted text, 3rd quote level
+#color quoted3 blue default                  # quoted text, 4th quoet level
+#color search black yellow                   # matched search patterns in pager
+#color signature brightgreen default         # the signature (after sigdashes)
+#color status default blue                   # status lines
+#color tilde brightblue default              # ``~'' used to pad blank lines
+#color tree green default                    # thread tree in the index menu
+#color underline underline         # underlined text
+#
+# Sidebar
+set sidebar_width = 30
+bind index,pager \ek sidebar-prev
+bind index,pager \ej sidebar-next
+bind index,pager \eo sidebar-open
+macro index,pager \eh ":set sidebar_visible=no<enter>" "Hide Sidebar"
+macro index,pager \el ":set sidebar_visible=yes<enter>" "Show Sidebar"
+
+color sidebar_new yellow default
+
+# Mailcap (autoexecute program declarations)
+set mailcap_path 	= ~/.mutt/mailcap
+
+# Spell corrector
+#set ispell="aspell -e -c"
+
+# Color
+source ~/.mutt/mutt_color
