@@ -4,8 +4,9 @@
 # Editor and utf-8 support
 set charset=UTF8
 set send_charset="iso-8859-1:utf-8"
-#set editor=`echo $EDITOR`
-set editor="vim +/^$/ +9"
+#set my_editor=`echo $EDITOR`
+set my_editor="vim +/^$/ +9"
+set editor=$my_editor
 set tilde
 
 # Basic config 
@@ -78,6 +79,23 @@ set mailcap_path 	= ~/.mutt/mailcap
 
 # Spell corrector
 #set ispell="aspell -e -c"
+
+# labels
+macro index,pager y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n\
+<edit><sync-mailbox><next-undeleted>\
+<enter-command>set editor=$my_editor\n" "Append label"
+#macro pager y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n\
+#<edit><sync-mailbox><next-undeleted>\
+#<enter-command>set editor=$my_editor\n" "Append label"
+macro index,pager Y "<enter-command>set editor=\"~/.mutt/editlabel menu\"\n\
+<edit><sync-mailbox><next-undeleted>\
+<enter-command>set editor=$my_editor\n" "Edit labels"
+#macro pager Y "<enter-command>set editor=\"~/.mutt/editlabel menu\"\n\
+#<edit><sync-mailbox><next-undeleted>\
+#<enter-command>set editor=$my_editor\n" "Edit labels"
+macro index \Cy "<limit>~y " "Limit view to label"
+# Display the labels
+set index_format="%4C %Z %{%b %d} %-20.20L %2e(%2E) %4c [%-15.15Y] %s"
 
 # Color
 source ~/.mutt/muttrc_color
