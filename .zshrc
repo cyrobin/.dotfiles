@@ -60,7 +60,7 @@ alias swipl='export LANG=""; swipl'
 alias dotsync="rsync -av \
     ~/.zshrc ~/.zshenv \
     ~/.gitconfig \
-    .todo .conky \
+    ~/.todo ~/.conky \
     ~/.mutt --exclude cache/ \
     ~/.dotfiles/"
 
