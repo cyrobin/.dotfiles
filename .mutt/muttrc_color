@@ -45,9 +45,9 @@ color   quoted4     yellow default
 color   quoted5     red default
 
 # Mail adresses and URLs
-mono    body        underline               "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+"
+mono    body        underline               "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9+]+"
 mono    body        underline               "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+"
-color	body		yellow default          (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
+color	body		yellow default          (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9+]+
 color	body		yellow default           [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 
 # GPG Signature
