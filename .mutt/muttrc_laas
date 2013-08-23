@@ -24,6 +24,9 @@ my_hdr bcc: cyril.robin@laas.fr
 macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index,pager ,s "<change-folder>=Sent<enter>" "Go to sent box"
 
+# Signature
+set signature="~/.mutt/signature_laas"
+
 # Address Book
 #source ~/.muttalias
 #set alias_file=~/.muttalias
