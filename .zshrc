@@ -453,6 +453,8 @@ export LD_LIBRARY_PATH="${HOME}/dev/lib:${LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="${HOME}/dev/lib/i386-linux-gnu:${LD_LIBRARY_PATH}"
 export PKG_CONFIG_PATH="${HOME}/dev/lib/pkgconfig:${PKG_CONFIG_PATH}"
 export INCLUDE="${HOME}/dev/include:${INCLUDE}"
+export PYTHONPATH="/usr/bin/:/usr/lib:/usr/include"
+export PYTHONPATH="${HOME}/dev/python:$PYTHONPATH"
 
 ###########################################
 # 7. LAAS Specific Variables              #
@@ -469,7 +471,6 @@ export ROBOTPKG_BASE=${HOME}/LAAS/workspace/tools/openrobots
 export PATH=${ROBOTPKG_BASE}/bin:${ROBOTPKG_BASE}/sbin:${PATH}
 export LD_LIBRARY_PATH="${ROBOTPKG_BASE}/lib:${ROBOTPKG_BASE}/lib/openprs:${LD_LIBRARY_PATH}"
 export PKG_CONFIG_PATH="${ROBOTPKG_BASE}/lib/pkgconfig:${PKG_CONFIG_PATH}"
-export PYTHONPATH="/usr/bin/:/usr/lib:/usr/include"
 export PYTHONPATH="${PYTHONPATH}:/usr/local/bin/:/usr/local/lib:/usr/local/include:/usr/local/lib/python3/dist-packages/"
 #export PYTHONPATH="/usr/bin/:/usr/lib:/usr/include:${HOME}/LAAS/workspace/tools/morse/:${HOME}/LAAS/workspace/tools/morse-laas/:${HOME}/LAAS/workspace/tools/morse-action/"
 
