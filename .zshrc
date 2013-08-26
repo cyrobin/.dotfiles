@@ -63,6 +63,7 @@ alias dotsync="rsync -av \
     ~/.todo ~/.conky \
     ~/.mutt --exclude cache/ \
     ~/.urlview \
+    ~/.cmus \
     ~/.dotfiles/"
 
 # Mutt alias
