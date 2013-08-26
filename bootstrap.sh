@@ -60,6 +60,9 @@ echo "*** Copying dotfiles to HOME..."
 cd ~/.dotfiles # git clone git://github.com/cyrobin/dotfiles.git ~/.dotfiles
 cp -r $DOTFILES ~
 
+# update less keybindings
+lesskey
+
 ###### Handle vim config
 echo "*** Handling vim config..."
 git clone git://github.com/cyrobin/.vim.git ~/.vim
