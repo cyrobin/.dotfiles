@@ -110,9 +110,6 @@ then
   fi
 fi
 
-# Use vim keybindings 
-bindkey -v
-
 # Adapt the color of the prompt to vi mode
 # (for rxvt-unicode-256color only ; does not work in tty)
 zle-keymap-select () {
@@ -282,6 +279,24 @@ key[PageDown]=${terminfo[knp]}
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
 
+# Use vim keybindings 
+bindkey -v
+
+# Vim keybindings for bépo
+if [[ $DISPLAY != '' && `setxkbmap -print|grep bepo` != '' ]]; then
+    bindkey -a c vi-backward-char
+    bindkey -a r vi-forward-char
+    bindkey -a t vi-down-line-or-history
+    bindkey -a s vi-up-line-or-history
+    bindkey -a $ vi-end-of-line
+    bindkey -a 0 vi-digit-or-beginning-of-line 
+    bindkey -a h vi-change
+    bindkey -a H vi-change-eol
+    bindkey -a dd vi-change-whole-line
+    bindkey -a l vi-replace-chars
+    bindkey -a L vi-replace
+    bindkey -a k vi-substitute
+fi
 
 ###########################################
 # 3. Options de zsh (cf 'man zshoptions') #
