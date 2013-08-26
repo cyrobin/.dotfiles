@@ -1,0 +1,34 @@
+#######################################
+## Bindings for qwerty/azerty layouts
+
+#######################################
+# Macro and keybindings
+macro index ,v "<collapse-thread>" "collapse/uncollapse thread"
+macro index ,V "<collapse-all>"    "collapse/uncollapse all threads"
+macro index ,d "<delete-thread>"   "delete all messages in the current thread"
+macro index ,u "<undelete-thread>" "undelete all messages in the current thread"
+macro index ,t "<tag-thread>"      "toggle the tag on the current thread"
+macro index ,r "<tag-pattern>all<return><tag-prefix><clear-flag>N<untag-pattern>all<return>" "mark all as read (collapsed)"
+macro index ,R "<collapse-all>,r<collapse-all>" "mark all as read"
+
+macro attach S <save-entry><kill-line>~/Downloads/
+
+# urlview
+macro pager ,b "|urlview<enter>" "Follow links with urlview"
+# use w3m as an alternative to urlview
+macro pager ,B "|w3m<enter>" "Follow links in w3m"
+
+# Sidebar
+bind  index,pager \ek sidebar-prev
+bind  index,pager \ej sidebar-next
+bind  index,pager \eo sidebar-open
+macro index,pager \eh ":set sidebar_visible=no<enter>" "Hide Sidebar"
+macro index,pager \el ":set sidebar_visible=yes<enter>" "Show Sidebar"
+
+# labels
+macro index,pager y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=$my_editor\n" "Append label"
+#macro pager y "<enter-command>set editor=\"~/.mutt/editlabel append\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=$my_editor\n" "Append label"
+macro index,pager Y "<enter-command>set editor=\"~/.mutt/editlabel menu\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=$my_editor\n" "Edit labels"
+#macro pager Y "<enter-command>set editor=\"~/.mutt/editlabel menu\"\n<edit><sync-mailbox><next-undeleted><enter-command>set editor=$my_editor\n" "Edit labels"
+macro index \Cy "<limit>~y " "Limit view to label"
+
