@@ -1,0 +1,117 @@
+# Attention! ce .procmailrc est fait pour gerer des boites a lettres
+# au format "Maildir". Ce format n'est utilise que par imap4.laas.fr
+# Ne pas copier betement si votre serveur IMAP n'est pas imap4.laas.fr
+#----------------------------------------------------------------------
+# Variables d'environnement
+DEFAULT=/var/mail/Maildir/$LOGNAME/
+
+#						-*- shell-script -*-
+
+PATH =		/usr/bin:/usr/local/bin
+ORGMAIL =	/var/mail/$LOGNAME
+MAILDIR =	/var/mail/Maildir/$LOGNAME
+DEFAULT =	$MAILDIR/./
+LOGFILE=	$HOME/procmail.log
+
+LOGABSTRACT =	yes
+
+VERBOSE=ON
+#VERBOSE=OFF
+
+#----------------------------------------------------------------------
+# Test de "from"
+#----------------------------------------------------------------------
+#:0:$HOME/.lockmail
+#* ^From: .*gmail\.com
+#.INBOX.Perso.Autres/
+
+# --- Spam ------------------------------------------------------------
+
+# --- INSA ------------------------------------------------------------
+:0:
+* ^Subject.*gei-moniteurs
+.INBOX.Enseignement.Autres/
+
+# --- Dev -------------------------------------------------------------
+:0:
+* ^From.*noreply@github.com
+.INBOX.Dev.Github/
+
+:0:
+* ^(From|To|Cc).*(git|cvs)-action@laas
+.INBOX.Dev.ACTION/
+
+:0:
+* ^(From|To|Cc).*morse-(users|dev)@laas
+.INBOX.Dev.Vracs/
+
+:0:
+* ^(From|To|Cc).*(robots|jafar)@laas
+.INBOX.Dev.Vracs/
+
+:0:
+* ^list-id: <(robots|jafar)-source.laas.fr>
+.INBOX.Dev.Vracs/
+
+:0:
+* ^list-id: <robotpkg.laas.fr>
+.INBOX.Dev.Vracs/
+
+# --- Other LAAS settings ---------------------------------------------
+:0:
+* ^(From|To|Cc):.*(pea-action@onera|action@laas)
+.INBOX.Travail.ACTION/
+
+:0:
+* ^(From|To|Cc):.*planact@laas
+.INBOX.Travail.PlanAct/
+
+:0:
+* ^Subject.*conclusions.*Conseil.*laboratoire
+.INBOX.Infos.Vracs/
+
+:0:
+* ^Subject.*EDITION MIDI-PYRENEES
+.INBOX.Infos.Vracs/
+
+:0:
+* ^From.*flaash@laas
+.INBOX.Infos.Vracs/
+
+:0:
+* ^Subject.*(Seminaire|Séminaire|Soutenance|Présentation)
+.INBOX.Seminaires.LAAS/
+
+:0:
+* ^(From|To|Cc).*annonce@laas
+.INBOX.Annonces.Vracs/
+
+# --- Robotics mailing list -------------------------------------------
+:0:
+* .*(Job opportunit(y|ies)|Post-doc|(S|s)tudentship|vacancy|(I|i)nternship|thèse|stage|PostDoc|Poste PR|engineer position|recrutement)
+.INBOX.Annonces.Offres/
+
+:0:
+* ^Subject.*(Summer( |-)(S|s)chool)
+.INBOX.Conférences.Summer\ School/
+
+:0:
+* ^Subject.*(Call (F|f)or|Submission|Deadline extension)
+.INBOX.Conférences.CFP/
+
+:0:
+* ^Subject.*(CFP|Cfp|Call (F|f)or|Submission|Deadline extension)
+.INBOX.Conférences.CFP/
+
+:0:
+* .*euron-dist.*Call for
+.INBOX.Conférences.CFP/
+
+:0:
+* ^Subject.*((W|w)orkshop|(C|c)onference)
+.INBOX.Conférences.Vracs/
+
+:0:
+* ^(From|To|Cc).*euron-dist@iais\.fraunhofer\.de
+.INBOX.Conférences.Vracs/
+
