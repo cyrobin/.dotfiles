@@ -155,10 +155,11 @@ zstyle ':vcs_info:git*:*' check-for-changes true
 zstyle ':vcs_info:git*' formats "(%s) %c %b%m" # hash changes branch misc -- no hash displayed
 zstyle ':vcs_info:git*' actionformats "(%s|${white}%a) %12.12i %c%u %b%m"
 
+#zstyle ':vcs_info:git*+set-message:*' hooks git-st git-stash git-untracked
 zstyle ':vcs_info:git*+set-message:*' hooks git-st git-stash git-untracked
 
-#zstyle ':vcs_info:git*:*' stagedstr "${green}S${white}"
-#zstyle ':vcs_info:git*:*' unstagedstr "${yellow}U${white}"
+zstyle ':vcs_info:git*:*' stagedstr "${green}S${white}"
+zstyle ':vcs_info:git*:*' unstagedstr "${yellow}U${white}"
 
 # Show remote ref name and number of commits ahead-of or behind
 function +vi-git-st() {
@@ -167,8 +168,8 @@ function +vi-git-st() {
 
     # Are we on a remote-tracking branch?
     remote=${$(git rev-parse --verify ${hook_com[branch]}@{upstream} \
-        #--symbolic-full-name --abbrev-ref 2>/dev/null)}
-        --symbolic-full-name 2>/dev/null)/refs\/remotes\/}
+        #--symbolic-full-name --abbrev-ref 2>/dev/null)/refs\/remotes\/}
+        --symbolic-full-name --abbrev-ref 2>/dev/null)}
 
     if [[ -n ${remote} ]] ; then
         # for git prior to 1.7
