@@ -61,9 +61,17 @@ set mailcap_path 	= ~/.mutt/mailcap
 # Display the labels
 set index_format="%4C %Z %{%b %d} %-20.20L %2e(%2E) %4c [%-15.15Y] %s"
 
+# Contact book (use abook)
+set query_command= "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add the sender mail address in Abook"
+bind editor  <Tab> complete-query
+
 # Color
 source ~/.mutt/muttrc_color
 
 # Keybindings
+#source ~/.mutt/muttrc_bepo
 #source ~/.mutt/muttrc_qwerty
-source ~/.mutt/muttrc_bepo
+set my_layout="~/.mutt/muttrc_`echo $MYLAYOUT`"
+source  $my_layout
+
