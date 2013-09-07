@@ -30,7 +30,7 @@ pavucontrol gnome-bluetooth pulseaudio numlockx rxvt-unicode-256color \
 xbacklight wicd cmus \
 python-fontforge filezilla calibre \
 system-config-printer \
-mutt-patched urlview \
+mutt-patched urlview abook\
 offlineimap msmtp \
 ldbd libnet-ldap-perl \
 ffmpeg gparted unetbootin
@@ -47,7 +47,7 @@ echo "*** Setting zsh as default login shell..."
 chsh -s /bin/zsh $(whoami)
 
 ###### Copy config dot files
-DOTFILES=".zshrc .gitconfig"
+DOTFILES=".zsh .gitconfig"
 
 echo "*** Backuping dotfiles: $DOTFILES ..."
 mkdir -p ~/backup_dotfiles
@@ -59,6 +59,9 @@ done
 echo "*** Copying dotfiles to HOME..."
 cd ~/.dotfiles # git clone git://github.com/cyrobin/dotfiles.git ~/.dotfiles
 cp -r $DOTFILES ~
+
+# trigger zsh config
+sh ~/.zsh/bootstrap.sh
 
 # update less keybindings
 lesskey
