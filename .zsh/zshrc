@@ -120,7 +120,8 @@ alias dotsync="rsync -av \
     ~/.todo ~/.conky \
     ~/.mutt --exclude cache/ \
     ~/.urlview \
-    ~/.cmus ~/.lesskey \
+    ~/.cmus --exclude cache \
+    ~/.lesskey \
     ~/.dotfiles/"
 
 # Mutt alias
