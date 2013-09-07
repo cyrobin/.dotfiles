@@ -4,20 +4,20 @@
 # General bindings
 bind browser,attach t next-entry
 bind browser,attach s previous-entry
-bind index t next-undeleted
-bind index s previous-undeleted
+bind index,pager t next-undeleted
+bind index,pager s previous-undeleted
 bind generic,index t next-entry
 bind generic,index s previous-entry
 bind browser T next-entry
 bind browser S previous-entry
-bind pager t next-line
-bind pager s previous-line
-bind index,attach k tag-entry
+#bind pager t next-line
+#bind pager s previous-line
+bind index k tag-entry
 bind index K tag-pattern
 bind index ^K untag-pattern
 bind index <Esc>k tag-thread
 bind pager,index é save-message
-bind attach k save-entry
+bind attach é save-entry
 
 #######################################
 
