@@ -26,6 +26,9 @@ macro index,pager ,s "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to sent mail
 #macro index,pager ,t "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
 #macro index,pager ,d "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
+# Signature
+#set signature="~/.mutt/signature_gmail"
+
 # Add contacts to google
 #macro index,pager a "goobook add" "add the sender address to Google contacts"
 # Reload goobook db
