@@ -1,0 +1,83 @@
+# TODO: REPLACE OPTION IN CAPITAL LETTER BY APPROPRIATE CONTENT
+# And do not forget to give 600 rights only to the owner : 
+# $ chmod 600 ~/.msmtprc
+[general]
+# choose ui style : 
+# ui ttyui is interactive and talkactive
+# ui quiet is for cron job -- suppress anything but errors
+# WARNING : this requires the password to be given in the config file...
+ui = ttyui
+#ui = quiet
+# List of accounts to be synced, separated by a comma.
+accounts = ACCOUNT_NAME
+# Controls how many accounts may be synced simultaneously
+# Only one account used here. Multiple accounts are supported, but need some changes
+maxsyncaccounts = 1
+
+[Account ACCOUNT_NAME]
+# Identifier for the local repository; e.g. the maildir to be synced via IMAP.
+localrepository = ACCOUNT-LOCAL
+# Identifier for the remote repository; i.e. the actual IMAP, usually non-local.
+remoterepository = ACCOUNT_REMOTE
+# Status cache. Default is plain, which eventually becomes huge and slow.
+# SQlite may be a dependency you need to install
+status_backend = sqlite
+# Minutes between syncs
+autorefresh = 5
+# Number of quick-syncs between autorefreshes. Quick-syncs do not update if the
+# only changes were to IMAP flags
+quick = 10
+
+[Repository ACCOUNT-LOCAL]
+# Currently, offlineimap only supports maildir and IMAP for local repositories
+type = Maildir
+# Where should the mails be placed?
+localfolders = ~/SOMEWHERE/OVERTHERAINBOW
+
+[Repository ACCOUNT-REMOTE]
+# Remote repos can be IMAP or Gmail, the latter being a preconfigured IMAP.
+type = Gmail
+#type = IMAP
+#remotehost = host.domain.tld (e.g. imap.domain.tld)
+#remoteport = 993
+remoteuser = USERNAME
+#remotepass = XXXXXXXXXXX
+#In Mutt we will move deleted items to Trash, so no need to set this to yes
+realdelete = no
+maxconnections = 3
+# Standard stuff
+ssl = yes
+# Instead of closing the connection once a sync is complete, offlineimap will
+# send empty data to the server to hold the connection open. A value of 60
+# attempts to hold the connection for a minute between syncs (both quick and
+# autorefresh).This setting has no effect if autorefresh and holdconnectionopen
+# are not both set.
+keepalive = 60
+# OfflineIMAP normally closes IMAP server connections between refreshes if
+# the global option autorefresh is specified.  If you wish it to keep the
+# connection open, set this to true. This setting has no effect if autorefresh
+# is not set.
+holdconnectionopen = yes
+# Don't mirror the All Mail folder
+#folderfilter = lambda foldername: foldername not in '[Gmail]/All Mail'
+
+# Allows SSL connections. This is probably an install dependency
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+# newer offlineimap needs this
+# but we should prefer cacertfile instead (see above)
+#cert_fingerprint = f3043dd689a2e7dddfbef82703a6c65ea9b634c1
+
+#Automatic mutt mailbox generation
+#[mbnames]
+## Creates a list of all imap mailboxes to be used by mutt to avoid having to retrieve
+## mailboxes from the IMAP server for every move or copy command
+#enabled = yes
+## Just create .mutt, and the mailboxes file will be written by offlineimap
+#filename = ~/.mutt/mailboxes
+## Standard stuff
+#header = "mailboxes "
+#peritem = "+%(accountname)s/%(foldername)s"
+#sep = " "
+#footer = "\n"
+#
