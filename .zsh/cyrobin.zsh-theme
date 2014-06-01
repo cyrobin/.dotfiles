@@ -28,7 +28,7 @@ function theme_precmd {
 
 setopt extended_glob
 theme_preexec () {
-    if [[ "$TERM" == "screen" ]]; then
+    if [[ "$TERM" == "tmux" ]]; then
 	local CMD=${1[(wr)^(*=*|sudo|-*)]}
 	echo -n "\ek$CMD\e\\"
     fi
@@ -90,8 +90,8 @@ setprompt () {
 	xterm*)
 	    PR_TITLEBAR=$'%{\e]0;%(!.-=*[ROOT]*=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\a%}'
 	    ;;
-	screen)
-	    PR_TITLEBAR=$'%{\e_screen \005 (\005t) | %(!.-=[ROOT]=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\e\\%}'
+	tmux)
+	    PR_TITLEBAR=$'%{\e_tmux \005 (\005t) | %(!.-=[ROOT]=- | .)%n@%m:%~ | ${COLUMNS}x${LINES} | %y\e\\%}'
 	    ;;
 	*)
 	    PR_TITLEBAR=''
@@ -100,8 +100,8 @@ setprompt () {
 
 
     ###
-    # Decide whether to set a screen title
-    if [[ "$TERM" == "screen" ]]; then
+    # Decide whether to set a tmux title
+    if [[ "$TERM" == "tmux" ]]; then
 	PR_STITLE=$'%{\ekzsh\e\\%}'
     else
 	PR_STITLE=''
@@ -133,6 +133,26 @@ $PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT$PR_NO_COLOUR '
 }
 
 setprompt
+
+# Adapt the color of the prompt to vi mode
+# (for rxvt-unicode-256color only ; does not work in tty)
+zle-keymap-select () {
+    if [ $TERM = "rxvt-unicode-256color" ]; then
+        if [ $KEYMAP = vicmd ]; then
+            echo -ne "\033]12;Red\007"
+        else
+            echo -ne "\033]12;Green\007"
+        fi
+    fi
+}
+zle -N zle-keymap-select
+zle-line-init () {
+    zle -K viins
+    if [ $TERM = "rxvt-unicode-256color" ]; then
+        echo -ne "\033]12;Green\007"
+    fi
+}
+zle -N zle-line-init
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
