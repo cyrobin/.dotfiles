@@ -11,12 +11,12 @@ set tilde
 
 # Basic config 
 set imap_check_subscribed
-set mail_check = 120
-set timeout = 300
-set imap_keepalive = 300
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/bodies
-set certificate_file=~/.mutt/certificates
+set mail_check = 240
+set timeout = 240
+set imap_keepalive = 240
+set header_cache = "~/.mutt/cache/"
+set message_cachedir = "~/.mutt/cache/"
+set certificate_file = "~/.mutt/certificates"
 set move = no
 set include
 set sort = 'threads'
@@ -38,6 +38,18 @@ set forward_quote
 set forward_format = "Fwd: %s"
 unset mark_old
 set reply_self
+set sleep_time = 0
+unset collapse_unread
+set uncollapse_jump
+#set delete
+
+folder-hook . 'set read_inc=100'
+# use very high $read_inc to speed up reading hcache'd maildirs
+#folder-hook . 'set read_inc=1000'
+# use lower value for reading slower remote IMAP folders
+#folder-hook ^imap 'set read_inc=100'
+# use even lower value for reading even slower remote POP folders
+#folder-hook ^pop 'set read_inc=1'
 
 # Layout
 #set status_chars  = " *%A"
@@ -70,8 +82,8 @@ bind editor  <Tab> complete-query
 source ~/.mutt/muttrc_color
 
 # Keybindings
-#source ~/.mutt/muttrc_bepo
+source ~/.mutt/muttrc_bepo
 #source ~/.mutt/muttrc_qwerty
-set my_layout="~/.mutt/muttrc_`echo $MYLAYOUT`"
-source  $my_layout
+#set my_layout="~/.mutt/muttrc_`echo $MYLAYOUT`"
+#source  $my_layout
 
