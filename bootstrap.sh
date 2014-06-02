@@ -47,7 +47,7 @@ echo "*** Setting zsh as default login shell..."
 chsh -s /bin/zsh $(whoami)
 
 ###### Copy config dot files
-DOTFILES=".zsh .gitconfig"
+DOTFILES=".zsh .gitconfig .cmus .mutt .lesskey"
 
 echo "*** Backuping dotfiles: $DOTFILES ..."
 mkdir -p ~/backup_dotfiles
