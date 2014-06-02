@@ -67,6 +67,9 @@ color sidebar_new yellow default
 # Mailcap (autoexecute program declarations)
 set mailcap_path 	= ~/.mutt/mailcap
 
+# Check attachement
+set sendmail = "~/.mutt/CheckAttach.zsh /usr/bin/sendmail -oem -oi"
+
 # Spell corrector
 #set ispell="aspell -e -c"
 
