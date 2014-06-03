@@ -57,7 +57,7 @@ for dotfile in $DOTFILES; do
 done
 
 echo "*** Copying dotfiles to HOME..."
-cd ~/.dotfiles # git clone git://github.com/cyrobin/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles # git clone https://github.com/cyrobin/dotfiles.git ~/.dotfiles
 cp -r $DOTFILES ~
 
 # trigger zsh config
@@ -68,12 +68,12 @@ lesskey
 
 ###### Handle vim config
 echo "*** Handling vim config..."
-git clone git://github.com/cyrobin/.vim.git ~/.vim
+git clone https://github.com/cyrobin/.vim.git ~/.vim
 sh ~/.vim/.install.sh
 
 ###### Handle awesome config
 echo "*** Handling awesome config..."
-git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
+git clone https://github.com/cyrobin/awesome-wm.git ~/.config/awesome
 
 ###### Handle muttrc config
 #echo "*** Handling awesome config..."
@@ -84,9 +84,6 @@ git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
 
 ###### Get useful scripts
 #TODO
-#echo "Getting useful scripts..."
-#git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
-# also : todo.txt ?
 
 
 ###### Remove the @$!# beeps from the speaker
@@ -103,9 +100,6 @@ sudo echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 # 0 * * * * /usr/bin/offlineimap > /dev/null 2>&1
 # Rsync LAAS Backup
 # 0 13 * * * sh /home/crobin/dev/scripts/make_backup_LAAS.sh
-
-#
-
 
 
 ###### Creating other desired repositories

@@ -56,12 +56,12 @@ lesskey
 
 ###### Handle vim config
 echo "*** Handling vim config..."
-git clone git://github.com/cyrobin/.vim.git ~/.vim
+git clone https://github.com/cyrobin/.vim.git ~/.vim
 sh ~/.vim/.install.sh
 
 ###### Handle awesome config
 echo "*** Handling awesome config..."
-git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
+git clone https://github.com/cyrobin/awesome-wm.git ~/.config/awesome
 
 ###### Handle muttrc config
 #echo "*** Handling muttrc config..."
@@ -74,7 +74,7 @@ git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
 echo "Setting ~/dev and Getting useful scripts..."
 mkdir -p ~/dev
 mkdir -p ~/dev/src
-git clone git://github.com/cyrobin/scripts ~/dev/src/scripts
+git clone https://github.com/cyrobin/scripts.git ~/dev/src/scripts
 cd ~/dev/src/scripts && git submodule update --init
 cd $HOME
 
@@ -82,7 +82,7 @@ cd $HOME
 echo "*** Handling awesome-wm config..."
 cd $HOME
 rm -rf ~/.config/awesome
-git clone git://github.com/cyrobin/awesome-wm ~/.config/awesome
+git clone https://github.com/cyrobin/awesome-wm.git ~/.config/awesome
 
 ###### Remove the @$!# beeps from the speaker
 echo "*** Disabling the aggressive beeps"
