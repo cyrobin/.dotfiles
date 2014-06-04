@@ -140,6 +140,9 @@ alias awesomecf="vim ~/.config/awesome/rc.lua"
 alias p3="python3"
 alias p2="python2.7"
 
+# libreoffice
+alias lo="libreoffice"
+
 #######################################
 # 2. Définition des touches #
 #######################################
