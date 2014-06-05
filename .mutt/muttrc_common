@@ -41,6 +41,7 @@ set reply_self
 set sleep_time = 0
 unset collapse_unread
 set uncollapse_jump
+set pipe_decode=yes # avoid cutting lines when piping to other programs (e.g urlview)
 #set delete
 
 folder-hook . 'set read_inc=100'

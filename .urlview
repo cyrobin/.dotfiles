@@ -1,3 +1,2 @@
-#REGEXP ((http|https|ftp|gopher):(//)?[^ <>"\\t]*|\\.[-a-z0-9.]+)[^ .,;\\t<">\\):]
-#COMMAND /usr/bin/nohup firefox -remote "openURL("%s", new-tab)" >/dev/null 2>&1 &
-COMMAND /usr/bin/nohup iceweasel %s >/dev/null 2>&1 &
+REGEXP ((((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^.,;\t>">\):])|(([-a-z0-9.]+)@([-a-z0-9]+)\.([a-z]+))
+COMMAND /usr/bin/nohup firefox   %s >/dev/null 2>&1 &
