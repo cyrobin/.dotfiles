@@ -20,7 +20,7 @@ set certificate_file = "~/.mutt/certificates"
 set move = no
 set include
 set sort = 'threads'
-set sort_aux = 'reverse-last-date-received'
+set sort_aux = 'last-date-received' # or 'reverse-last-date-received'
 set auto_tag = yes
 unset markers
 ignore *                               # first, ignore all headers
@@ -72,10 +72,12 @@ set mailcap_path 	= ~/.mutt/mailcap
 set sendmail = "~/.mutt/CheckAttach.zsh /usr/bin/sendmail -oem -oi"
 
 # Spell corrector
+# here, use vim spell checker instead
 #set ispell="aspell -e -c"
 
 # Index of mails : (see documentation)
 set index_format="%4C %{%b %d} %-20.20L %2e(%2E) %4c %s"
+set folder_format="%3C %d %4N %8s %f"
 
 # Contact book (use abook)
 set query_command= "abook --mutt-query '%s'"
