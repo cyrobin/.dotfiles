@@ -9,7 +9,7 @@ set my_editor="vim +/^$/ +9"
 set editor=$my_editor
 set tilde
 
-# Basic config 
+# Basic config
 set imap_check_subscribed
 set mail_check = 240
 set timeout = 240
@@ -31,7 +31,7 @@ alternative_order text/plain text/enriched text/html *     # save html for last
 auto_view text/html
 bind editor <Tab> complete-query
 bind editor ^T complete
-bind editor <space> noop 
+bind editor <space> noop
 set edit_headers = yes
 set autoedit
 set forward_quote
@@ -61,7 +61,7 @@ set quit = ask-yes
 folder-hook . "exec collapse-all"
 
 # Sidebar
-set sidebar_width = 30
+set sidebar_width = 20
 color sidebar_new yellow default
 
 # Mailcap (autoexecute program declarations)
@@ -73,8 +73,8 @@ set sendmail = "~/.mutt/CheckAttach.zsh /usr/bin/sendmail -oem -oi"
 # Spell corrector
 #set ispell="aspell -e -c"
 
-# Display the labels
-set index_format="%4C %Z %{%b %d} %-20.20L %2e(%2E) %4c [%-15.15Y] %s"
+# Index of mails : (see documentation)
+set index_format="%4C %{%b %d} %-20.20L %2e(%2E) %4c %s"
 
 # Contact book (use abook)
 set query_command= "abook --mutt-query '%s'"
@@ -85,8 +85,8 @@ bind editor  <Tab> complete-query
 source ~/.mutt/muttrc_color
 
 # Keybindings
-source ~/.mutt/muttrc_bepo
-#source ~/.mutt/muttrc_qwerty
+#source ~/.mutt/muttrc_bepo
+source ~/.mutt/muttrc_qwerty
 #set my_layout="~/.mutt/muttrc_`echo $MYLAYOUT`"
 #source  $my_layout
 
