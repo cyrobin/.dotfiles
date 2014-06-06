@@ -90,3 +90,5 @@ source ~/.mutt/muttrc_color
 source ~/.mutt/muttrc_qwerty
 #source ~/.mutt/muttrc_bepo
 
+# Host specific settings
+source ~/.mutt/muttrc_`hostname`
