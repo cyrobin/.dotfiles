@@ -35,8 +35,7 @@ alternates "crobin@etud.insa-toulouse.fr"
 set signature="~/.mutt/signature_laas"
 
 # Address Book
-#source ~/.muttalias
-#set alias_file=~/.muttalias
+set alias_file="~/.mutt/aliases_laas"
 
 # Shared settings
 source ~/.mutt/muttrc_common

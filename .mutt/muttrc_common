@@ -78,10 +78,12 @@ set status_format="%f-%r-(%?L?%L/?%l)--{%?M?%M/?%m%?n? n:%n?%?o? o:%o?%?d? d:%d?
 set xterm_set_titles=yes # allowed on debian
 set xterm_title='mutt @ %h | %f %?n?%n/?%m msgs'
 
-# Contact book (use abook)
-set query_command= "abook --mutt-query '%s'"
-macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add the sender mail address in Abook"
-bind editor  <Tab> complete-query
+# Contact book (mutt aliases)
+# set alias_file="" # (NB: assume that  the alias file has already been set)
+source $alias_file
+set sort_alias = alias
+set reverse_alias = yes
+#set alias_format = "" #TODO
 
 # Color
 source ~/.mutt/muttrc_color
