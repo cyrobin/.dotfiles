@@ -5,7 +5,7 @@
 # source qwerty, and overwrite desired values
 source ~/.mutt/muttrc_qwerty
 
-# General bindings
+# General bindings and macro
 bind browser,attach t next-entry
 bind browser,attach s previous-entry
 bind index,pager t next-undeleted
@@ -23,6 +23,6 @@ bind pager,index é save-message
 bind  index,pager \363 sidebar-prev # alt + s
 bind  index,pager \364 sidebar-next # alt + t
 
-# Macro
-macro attach é <save-entry><kill-line>~/Downloads/
+bind  attach é save-entry
+macro attach É <save-entry><kill-line>~/Downloads/
 
