@@ -26,7 +26,7 @@ texlive-full rubber tmux\
 make make-doc cmake-curses-gui\
 awesome awesome-extra slim conky\
 i3lock libnotify-bin xfonts-terminus ttf-dejavu xcompmgr alsa-utils \
-pavucontrol gnome-bluetooth pulseaudio numlockx rxvt-unicode-256color \
+pavucontrol gnome-bluetooth pulseaudio numlockx rxvt-unicode-256color xsel\
 xbacklight wicd cmus \
 python-fontforge filezilla calibre \
 system-config-printer \
