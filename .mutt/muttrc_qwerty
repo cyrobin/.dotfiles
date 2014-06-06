@@ -13,6 +13,16 @@ macro index ,R "<collapse-all>,r<collapse-all>" "mark all as read"
 
 macro attach s <save-entry><kill-line>~/Downloads/
 
+bind index,pager   "{"      previous-thread
+bind index,pager   "}"      next-thread
+bind index,pager   <up>     previous-entry
+bind index,pager   <down>   next-entry
+bind index         "G"      last-entry
+bind index         "H"      first-entry
+bind pager         "H"      top
+bind pager         "G"      bottom
+
+
 # urlview
 macro pager ,b "|urlview<enter>" "Follow links with urlview"
 # use w3m as an alternative to urlview
