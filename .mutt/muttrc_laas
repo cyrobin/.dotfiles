@@ -20,9 +20,16 @@ set record = "+Sent"
 my_hdr Organization: LAAS/CNRS (Toulouse, France)
 my_hdr bcc: cyril.robin@laas.fr
 
+# Set alternate (other adresses that are me)
+alternates "cyril.robin@laas.fr"
+alternates "crobin@laas.fr"
+alternates "cyril.robin@insa-toulouse.fr"
+alternates "crobin@insa-toulouse.fr"
+alternates "cyril.robin@etud.insa-toulouse.fr"
+alternates "crobin@etud.insa-toulouse.fr"
+
 # Specific macro and keybindings
-macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ,s "<change-folder>=Sent<enter>" "Go to sent box"
+#
 
 # Signature
 set signature="~/.mutt/signature_laas"
