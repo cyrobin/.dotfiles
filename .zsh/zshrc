@@ -147,7 +147,7 @@ alias lo="libreoffice"
 # 2. Définition des touches #
 #######################################
 
-# Use vim keybindings 
+# Use vim keybindings
 # (put this before the other bindings to avoid overwriting)
 bindkey -v
 
@@ -206,7 +206,7 @@ if [[ $DISPLAY != '' && `setxkbmap -print|grep bepo` != '' ]]; then
     bindkey -a t vi-down-line-or-history
     bindkey -a s vi-up-line-or-history
     bindkey -a $ vi-end-of-line
-    bindkey -a 0 vi-digit-or-beginning-of-line 
+    bindkey -a 0 vi-digit-or-beginning-of-line
     bindkey -a h vi-change
     bindkey -a H vi-change-eol
     bindkey -a dd vi-change-whole-line
@@ -224,7 +224,7 @@ export MYLAYOUT="bepo"
 # 3. Options de zsh (cf 'man zshoptions') #
 ###########################################
 
-# Je ne veux JAMAIS de beeps 
+# Je ne veux JAMAIS de beeps
 unsetopt beep
 unsetopt hist_beep
 unsetopt list_beep
