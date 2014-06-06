@@ -18,26 +18,29 @@ mono    underline   underline                   # highlighting underlined patter
 
 mono    header      bold    "^(from|subject):"
 
-color	normal		default default             # default colours
-color   index       brightyellow default ~N     # new messages
-color   index       green default ~F            # flagged messages
-color   index       cyan default ~T             # tagged messages
-color   index       red default ~D              # deleted messages
-color	attachment	brightmagenta default       # attachments
-color	signature	brightwhite default         # sigs
+# order matters
+color   normal      default         default        # default colours
+color   index       cyan            default ~p     # messages to me
+color   index       blue            default ~P     # messages from me
+color   index       brightgreen     default ~F     # flagged messages
+color   index       brightyellow    default ~N     # new messages
+color   index       brightcyan      default ~T     # tagged messages
+color   index       red             default ~D     # deleted messages
+color   attachment  brightmagenta   default        # attachments
+color   signature   brightwhite     default        # sigs
 
-color	indicator	brightwhite magenta         # currently highlighted message
-color	error		brightred default           # error messages (lower bar)
+color   indicator   brightwhite magenta         # currently highlighted message
+color   error       brightred default           # error messages (lower bar)
 color   status      brightgreen brightblack     # status lines
-color	tree	    red default                 # thread tree
+color   tree        red default                 # thread tree
 color   tilde       cyan default                # blank line padding
 
-color	hdrdefault	cyan default                # default headers
+color   hdrdefault  cyan default                # default headers
 color   header      brightcyan default "^From:"
 color   header      brightwhite default "^Subject:"
 
 # Quoted text
-color	quoted		green default                # quote colours
+color   quoted      green default                # quote colours
 color   quoted1     cyan default
 color   quoted2     blue default
 color   quoted3     brightcyan default
@@ -47,16 +50,16 @@ color   quoted5     red default
 # Mail adresses and URLs
 mono    body        underline               "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9+]+"
 mono    body        underline               "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+"
-color	body		yellow default          (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9+]+
-color	body		yellow default           [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color   body        yellow default          (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9+]+
+color   body        yellow default          [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 
 # GPG Signature
-color	body	    green default           "^gpg: Good signature from"
-color	body	    brightred default		"^gpg: Bad signature from"
-color	body	    brightred default		"^gpg: BAD signature from"
-color	body	    brightred default		"^gpg: Note: This key has expired!"
-color	body	    brightyellow default	"^gpg: WARNING: This key is not certified with a trusted signature!"
-color	body	    brightyellow default	"^gpg:          There is no indication that the signature belongs to the owner."
-color	body	    brightyellow default	"^gpg: can't handle these multiple signatures"
-color	body	    brightyellow default	"^gpg: signature verification suppressed"
-color	body	    brightyellow default	"^gpg: invalid node with packet of type"
+color   body        green default           "^gpg: Good signature from"
+color   body        brightred default       "^gpg: Bad signature from"
+color   body        brightred default       "^gpg: BAD signature from"
+color   body        brightred default       "^gpg: Note: This key has expired!"
+color   body        brightyellow default    "^gpg: WARNING: This key is not certified with a trusted signature!"
+color   body        brightyellow default    "^gpg:          There is no indication that the signature belongs to the owner."
+color   body        brightyellow default    "^gpg: can't handle these multiple signatures"
+color   body        brightyellow default    "^gpg: signature verification suppressed"
+color   body        brightyellow default    "^gpg: invalid node with packet of type"
