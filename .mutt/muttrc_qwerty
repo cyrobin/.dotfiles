@@ -29,10 +29,10 @@ macro pager ,b "|urlview<enter>" "Follow links with urlview"
 macro pager ,B "|w3m<enter>" "Follow links in w3m"
 
 # Sidebar
-bind  index,pager \357 sidebar-open # alt + o
-bind  index,pager \352 sidebar-prev # alt + k
-bind  index,pager \353 sidebar-next # alt + j
-macro index,pager \350 ":toggle sidebar_visible<enter>" "Hide Sidebar" # alt + h
+bind  index,pager O sidebar-open
+bind  index,pager K sidebar-prev
+bind  index,pager J sidebar-next
+macro index,pager ,h ":toggle sidebar_visible<enter>" "Hide Sidebar"
 
 # Move
 macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
