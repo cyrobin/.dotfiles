@@ -4,15 +4,16 @@
 # IMAP Settings
 set imap_user = "crobin"
 set imap_pass = ""
-set folder = "imaps://imap.laas.fr/"
-set spoolfile = "imaps://imap.laas.fr/INBOX"
+set folder = "imaps://imap4.laas.fr/"
+set spoolfile = "imaps://imap4.laas.fr/INBOX"
 
 # SMTP Settings
-set smtp_url = "smtps://crobin@mail.laas.fr/"
+#set smtp_url = "smtps://crobin@mail.laas.fr/"
+set smtp_url="smtps://crobin@smtp.laas.fr:465/"
 set smtp_pass = ""
+
 set from = "cyril.robin@laas.fr"
 set realname = "Cyril Robin"
-
 set hostname = "laas.fr"
 set postponed = "+Drafts"
 set record = "+Sent"
@@ -28,8 +29,18 @@ alternates "crobin@insa-toulouse.fr"
 alternates "cyril.robin@etud.insa-toulouse.fr"
 alternates "crobin@etud.insa-toulouse.fr"
 
-# Specific macro and keybindings
-#
+# mailing-list
+# TODO
+#subscribe awesome@naquadah.org
+
+# hooks
+# TODO
+#save-hook "~C awesome@naquadah.org" =listes/awesome
+
+# Multi-account
+# TODO
+#send-hook '~C ^contact@crobin\.net$' 'my_hdr From: crobin <contact@crobin.am>'
+#send-hook '~f ^contact@crobin\.net$' 'set signature="~/.mutt/signatures/gandi.txt"'
 
 # Signature
 set signature="~/.mutt/signature_laas"
