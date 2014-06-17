@@ -494,7 +494,7 @@ export CMAKE_INSTALL_PREFIX="${HOME}/dev/"
 export PYTHONPATH="${HOME}/dev/lib/python2.7/dist-packages:${HOME}/dev/lib/python3/dist-packages:$PYTHONPATH"
 
 
-export ROBOT=minnie
+#export ROBOT=minnie
 
 # Prolog : eclipse
 export PATH=$PATH:/home/crobin/dev/src/eclipse_prolog/bin/x86_64_linux
