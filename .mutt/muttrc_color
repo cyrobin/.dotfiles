@@ -32,7 +32,7 @@ color   signature   brightwhite     default        # sigs
 color   indicator   brightwhite magenta         # currently highlighted message
 color   error       brightred default           # error messages (lower bar)
 color   status      brightgreen brightblack     # status lines
-color   tree        red default                 # thread tree
+color   tree        cyan default                 # thread tree
 color   tilde       cyan default                # blank line padding
 
 color   hdrdefault  cyan default                # default headers
