@@ -2,9 +2,11 @@
 # Shared settings
 
 # Editor and utf-8 support
-set charset=UTF8
-set send_charset="iso-8859-1:utf-8"
-set my_editor="vim +/^$/ +9"
+set allow_8bit=yes
+set locale = fr_FR.utf8
+set charset="utf-8"
+set send_charset="utf-8:iso-8859-15:us-ascii"
+set my_editor='vim -c "setlocal wrapmargin=0 textwidth=0 wrap nocp linebreak " -c +/^$/ +9 '
 set editor=$my_editor
 set tilde
 
@@ -40,20 +42,15 @@ set reply_self
 set sleep_time = 0
 unset collapse_unread
 set uncollapse_jump
+set text_flowed=yes # avoid (weird) line break that are not desirable anymore in the 21st century
 set pipe_decode = yes # avoid cutting lines when piping to other programs (e.g urlview)
 set pipe_split # apply external command to each piped messages (and not all at once)
-set mark_old=no
 set quit = ask-yes
 unset suspend # don't suspend mutt, as it has its own terminal
 
-folder-hook . 'set read_inc=100'
-# use very high $read_inc to speed up reading hcache'd maildirs
-#folder-hook . 'set read_inc=1000'
-# use lower value for reading slower remote IMAP folders
-#folder-hook ^imap 'set read_inc=100'
-# use even lower value for reading even slower remote POP folders
-#folder-hook ^pop 'set read_inc=1'
 
+# Hooks
+folder-hook . 'set read_inc=100'
 folder-hook . "exec collapse-all"
 
 # Sidebar
@@ -71,7 +68,7 @@ set smart_wrap=yes
 set markers=no
 set pager_context = 5
 set pager_index_lines = 10
-set index_format="%4C %{%b %d} %-20.20L %2e(%2E) %4c %s"
+set index_format="%4C %{%b %d} %-20.20L (%2E) %4c %s"
 set folder_format="%3C %d %4N %8s %f"
 #set attribution="%n <%a> wrote [%{!%Y-%m-%d %H:%M %Z}]:"
 set status_format="%f-%r-(%?L?%L/?%l)--{%?M?%M/?%m%?n? n:%n?%?o? o:%o?%?d? d:%d?%?t? t:%t?}-%?b?-[Inc: %b]?-%?p?-[Post: %p]?-%>-%?V?/%V/&(%s/%S)?-%P-"
