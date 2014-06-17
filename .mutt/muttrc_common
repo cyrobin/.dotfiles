@@ -76,11 +76,23 @@ set xterm_set_titles=yes # allowed on debian
 set xterm_title='mutt @ %h | %f %?n?%n/?%m msgs'
 
 # Contact book (mutt aliases)
-# set alias_file="" # (NB: assume that  the alias file has already been set)
-source $alias_file
+# set alias_file="" # (NB: here, we assume that  the alias file has already been set)
 set sort_alias = alias
 set reverse_alias = yes
 #set alias_format = "" #TODO
+bind editor <Tab> complete      # default Mutt setting
+bind editor ^T complete-query   # default Mutt setting
+unset query_command             # default Mutt setting
+source $alias_file
+
+#  Other contact management system
+# (to be placed in specific mail account muttrc ?)
+#bind editor <Tab> complete-query
+#bind editor ^T complete
+#set query_command = "goobook query '%s'"
+#set query_command = "abook --mutt-query '%s'"
+#set query_command="/home/username/bin/pc_query -m '%s'"
+#set query_command=”mu cfind –format=mutt-ab  ‘%s’”
 
 # Color
 source ~/.mutt/muttrc_color
