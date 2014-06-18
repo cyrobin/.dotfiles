@@ -24,10 +24,15 @@ color   index       cyan            default ~p     # messages to me
 color   index       blue            default ~P     # messages from me
 color   index       brightgreen     default ~F     # flagged messages
 color   index       brightyellow    default ~N     # new messages
-color   index       brightcyan      default ~T     # tagged messages
 color   index       red             default ~D     # deleted messages
+color   index       brightcyan      default ~T     # tagged messages
 color   attachment  brightmagenta   default        # attachments
 color   signature   brightwhite     default        # sigs
+
+color   index       brightgreen     default "~v~(~F)"     # collapsed thread with flagged messages
+color   index       brightyellow    default "~v~(~N)"     # collapsed thread with new messages
+color   index       red             default "~v~(~D)"     # collapsed thread with deleted messages
+color   index       brightcyan      default "~v~(~T)"     # collapsed thread with tagged messages
 
 color   indicator   brightwhite magenta         # currently highlighted message
 color   error       brightred default           # error messages (lower bar)
