@@ -18,13 +18,15 @@ make make-doc cmake-curses-gui \
 awesome awesome-extra slim conky \
 i3lock libnotify-bin xfonts-terminus ttf-dejavu xcompmgr alsa-utils \
 pavucontrol gnome-bluetooth pulseaudio numlockx rxvt-unicode-256color xsel\
-xbacklight wicd cmus \
+xbacklight cmus \
+uzbl chromium-browser \
 python-fontforge filezilla calibre \
 system-config-printer-common \
 mutt-patched urlview abook \
 offlineimap msmtp \
 gparted unetbootin \
-calibre synaptic
+calibre synaptic p7zip-rar \
+python-numpy python3-numpy
 
 ###### Other proprietary packages
 # For Mendeley desktop : check the website

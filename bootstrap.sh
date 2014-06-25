@@ -33,7 +33,8 @@ system-config-printer \
 mutt-patched urlview abook\
 offlineimap msmtp \
 ldbd libnet-ldap-perl \
-ffmpeg gparted unetbootin
+ffmpeg gparted unetbootin \
+uzbl p7zip-rar
 
 ###### Other proprietary packages
 ## For Intel wifi : 
