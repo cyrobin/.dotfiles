@@ -123,7 +123,7 @@ alias acICP='export LC_CTYPE="fr_FR.utf8"; echo "export LC_CTYPE=$LC_CTYPE" ; ac
 alias dotsync="rsync -av \
     ~/.zsh --exclude oh-my-zsh/ \
     ~/.gitconfig \
-    ~/.todo ~/.conky \
+    ~/.todo \
     ~/.mutt --exclude cache/ \
     ~/.urlview \
     ~/.cmus --exclude cache \
