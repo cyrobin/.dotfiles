@@ -407,6 +407,9 @@ export PYTHONPATH="usr/lib/python3:/usr/include/python3":$PYTHONPATH
 
 export CHEATCOLORS=tru
 
+# Support for bépo
+export GTK_IM_MODULE=xim
+
 ###########################################
 # 7. LAAS Specific Variables              #
 ###########################################
