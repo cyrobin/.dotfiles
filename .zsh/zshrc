@@ -134,6 +134,7 @@ alias update_dotfiles="rsync -uv \
 # Mutt alias
 alias ml="mutt -F ~/.mutt/muttrc_laas"
 alias mg="mutt -F ~/.mutt/muttrc_gmail"
+alias mm="mutt -F ~/.mutt/muttrc_me"
 #alias m='mutt -y'
 
 # awesome
