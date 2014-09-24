@@ -27,8 +27,8 @@ my_hdr bcc: me@crobin.net
 # Set alternate (other adresses that are me)
 alternates "cyril.robin@ensta.org"
 
-# mailing-list
-# TODO
+# known mailing-list
+# subscriped mailing-list
 #subscribe awesome@naquadah.org
 
 # hooks

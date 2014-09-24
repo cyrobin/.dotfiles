@@ -29,9 +29,30 @@ alternates "crobin@insa-toulouse.fr"
 alternates "cyril.robin@etud.insa-toulouse.fr"
 alternates "crobin@etud.insa-toulouse.fr"
 
-# mailing-list
-# TODO
-#subscribe awesome@naquadah.org
+# known mailing-list
+lists pea-action@onera.fr
+# subscriped mailing-list
+subscribe robotics-worldwide@usc.edu
+subscribe euron-dist@iais.fraunhofer.de
+subscribe newsletter@gdr-robotique.org
+subscribe ai-robotics@googlegroups.com
+subscribe jet@inria.fr
+subscribe annonce@laas.fr
+subscribe toutlelaas@laas.fr
+subscribe ria@laas.fr
+subscribe ris@laas.fr
+subscribe robots@laas.fr
+subscribe robots-source@laas.fr
+subscribe morse-users@laas.fr
+subscribe morse-dev@laas.fr
+subscribe robotpkg@laas.fr
+subscribe morse@noreply.github.com
+subscribe notifications@github.com
+subscribe gei-dce@insa-toulouse.fr
+subscribe gei-personnels@insa-toulouse.fr
+subscribe gei-enseignants@insa-toulouse.fr
+subscribe these@laas.fr
+subscribe action@laas.fr
 
 # hooks
 # TODO
