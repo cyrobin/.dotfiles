@@ -499,6 +499,8 @@ export CMAKE_INSTALL_PREFIX="${HOME}/dev/"
 #export PYTHONPATH="${PYTHONPATH}:/usr/local/bin/:/usr/local/lib:/usr/local/include:/usr/local/lib/python3/dist-packages/"
 export PYTHONPATH="${HOME}/dev/lib/python2.7/dist-packages:${HOME}/dev/lib/python3/dist-packages:$PYTHONPATH"
 
+# GLPK
+export PYTHONPATH="${HOME}/dev/lib/python2.7/site-packages:${HOME}/dev/lib/python3/site-packages:$PYTHONPATH"
 
 #export ROBOT=minnie
 
