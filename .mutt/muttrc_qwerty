@@ -23,6 +23,8 @@ bind index         "H"      first-entry
 bind pager         "H"      top
 bind pager         "G"      bottom
 
+bind index "^" imap-fetch-mail
+
 # urlview
 macro pager ,b "|urlview<enter>" "Follow links with urlview"
 # use w3m as an alternative to urlview
