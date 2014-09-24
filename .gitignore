@@ -3,3 +3,5 @@
 .cmus/lib.pl
 .cmus/playlist.pl
 .cmus/search-history
+.mutt/aliases_*
+.mutt/certificates
