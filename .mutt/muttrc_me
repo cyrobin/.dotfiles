@@ -32,13 +32,11 @@ alternates "cyril.robin@ensta.org"
 #subscribe awesome@naquadah.org
 
 # hooks
-# TODO
-#save-hook "~C awesome@naquadah.org" =listes/awesome
+#fcc-save-hook "~C awesome@naquadah.org" +listes/awesome
 
 # Multi-account
-# TODO
-#send-hook '~C ^contact@crobin\.net$' 'my_hdr From: crobin <contact@crobin.am>'
-#send-hook '~f ^contact@crobin\.net$' 'set signature="~/.mutt/signatures/gandi.txt"'
+#send-hook '~C ^me@crobin\.net$' 'my_hdr From: Cyril Robin <me@crobin.net>'
+#send-hook '~f ^me@crobin\.net$' 'set signature="~/.mutt/signatures_gandi.txt"'
 
 # Signature
 set signature="~/.mutt/signature_me"

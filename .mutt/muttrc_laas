@@ -55,13 +55,6 @@ subscribe these@laas.fr
 subscribe action@laas.fr
 
 # hooks
-# TODO
-#save-hook "~C awesome@naquadah.org" =listes/awesome
-
-# Multi-account
-# TODO
-#send-hook '~C ^contact@crobin\.net$' 'my_hdr From: crobin <contact@crobin.am>'
-#send-hook '~f ^contact@crobin\.net$' 'set signature="~/.mutt/signatures/gandi.txt"'
 
 # Signature
 set signature="~/.mutt/signature_laas"
