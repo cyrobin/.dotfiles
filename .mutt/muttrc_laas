@@ -4,8 +4,8 @@
 # IMAP Settings
 set imap_user = "crobin"
 set imap_pass = ""
-set folder = "imaps://imap4.laas.fr/"
-set spoolfile = "imaps://imap4.laas.fr/INBOX"
+set folder = "imaps://imap.laas.fr/"
+set spoolfile = "imaps://imap.laas.fr/INBOX"
 
 # SMTP Settings
 #set smtp_url = "smtps://crobin@mail.laas.fr/"
