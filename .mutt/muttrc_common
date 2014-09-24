@@ -18,7 +18,8 @@ set imap_keepalive = 240
 set header_cache = "~/.mutt/cache/"
 set message_cachedir = "~/.mutt/cache/"
 set certificate_file = "~/.mutt/certificates"
-set move = no
+set move = yes          # Do move read mails automatically to $mbox
+set keep_flagged = yes  # but for flagged messages (which stay in spool, don't go to $mbox)
 set include=yes
 set sort = 'threads'
 set sort_aux = 'last-date-received' # or 'reverse-last-date-received'
@@ -103,3 +104,14 @@ source ~/.mutt/muttrc_qwerty
 
 # Host specific settings
 source ~/.mutt/muttrc_`hostname`
+
+# Multi-account
+account-hook "crobin.net" 'set imap_user=me@crobin.net move=yes keep_flagged=yes'
+account-hook "laas.fr" 'set imap_user=crobin move=no'
+macro index,pager <F4> '<sync-mailbox><enter-command>source ~/.mutt/muttrc_me<enter><change-folder>!<enter>'
+macro index,pager <F5> '<sync-mailbox><enter-command>source ~/.mutt/muttrc_laas<enter><change-folder>!<enter>'
+
+#macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+# Define mailbx that matters (ie receive mails)
+#unmailboxes *
+#mailboxes =INBOX $record $postponed $mbox
