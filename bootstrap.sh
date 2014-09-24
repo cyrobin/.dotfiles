@@ -36,8 +36,12 @@ ldbd libnet-ldap-perl \
 ffmpeg gparted unetbootin \
 uzbl p7zip-rar
 
+###### Remove unused packages
+#echo "*** Purging other packages..."
+#sudo apt-get purge iceweasel
+
 ###### Other proprietary packages
-## For Intel wifi : 
+## For Intel wifi :
 # apt-get install firmware-iwlwifi ;
 # modprobe -r iwlwifi ; modprobe iwlwifi
 ## For Mendeley desktop : check the website
@@ -94,7 +98,7 @@ sudo echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf
 
 ###### Cron tasks
 #TODO
-# Use crontab -e and : 
+# Use crontab -e and :
 # Mail quick check every couple of minutes
 # 4-59/2 * * * * /usr/bin/offlineimap -q > /dev/null 2>&1
 # Mail full check every hour
