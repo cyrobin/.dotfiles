@@ -66,4 +66,4 @@ set alias_file="~/.mutt/aliases_laas"
 source ~/.mutt/muttrc_common
 
 # Special color-theme (easily identifies the mail account)
-color   status      brightcyan brightblack     # status lines
+color   status      brightcyan default     # status lines
