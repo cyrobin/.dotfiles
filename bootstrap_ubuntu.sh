@@ -26,15 +26,18 @@ mutt-patched urlview abook \
 offlineimap msmtp \
 gparted unetbootin \
 calibre synaptic p7zip-rar \
-python-numpy python3-numpy
+python-numpy python3-numpy \
+inkscape
 
 ###### Remove unused packages
 #echo "*** Purging other packages..."
 #sudo apt-get purge thunderbird
 
 ###### Other proprietary packages
-# For Mendeley desktop : check the website
 # For Dropbox
+sudo apt-get nautilus-dropbox
+# For Mendeley desktop : check the website
+# TODO manually
 
 ###### Set up the shell
 echo "*** Setting zsh as default login shell..."
