@@ -8,7 +8,6 @@ set folder = "imaps://imap.laas.fr/"
 set spoolfile = "imaps://imap.laas.fr/INBOX"
 
 # SMTP Settings
-#set smtp_url = "smtps://crobin@mail.laas.fr/"
 set smtp_url="smtps://crobin@smtp.laas.fr:465/"
 set smtp_pass = ""
 
@@ -17,6 +16,7 @@ set realname = "Cyril Robin"
 set hostname = "laas.fr"
 set postponed = "+Drafts"
 set record = "+Sent"
+set mbox = "+Archives"
 
 my_hdr Organization: LAAS/CNRS (Toulouse, France)
 my_hdr bcc: cyril.robin@laas.fr

@@ -6,7 +6,7 @@ set imap_user = "me@crobin.net"
 #set imap_pass = ""
 set folder = "imaps://crobin.net:993/"
 #set folder = "imaps://milan.o2switch.net:993"
-set spoolfile = "=INBOX/"
+set spoolfile = "+INBOX"
 
 # SMTP Settings
 set smtp_url="smtps://me@crobin.net@crobin.net:465/"
@@ -15,24 +15,14 @@ set smtp_url="smtps://me@crobin.net@crobin.net:465/"
 
 set from = "me@crobin.net"
 set realname = "Cyril Robin"
-#set hostname = "mail.crobin.net"
 set hostname = "crobin.net"
-mailboxes =INBOX
-#set postponed = "=Drafts"
-#set record = "=Sent"
-#set mbox = "=Archives"
-set postponed = "imaps://crobin.net/INBOX/Drafts"
-set record = "imaps://crobin.net/INBOX/Sent"
-set mbox = "imaps://crobin.net/INBOX/Archives"
+mailboxes +INBOX
+set postponed = "+INBOX/Drafts"
+set record = "+INBOX/Sent"
+set mbox = "+INBOX/Archives"
 
 my_hdr Organization:
 my_hdr bcc: me@crobin.net
-
-## Other shortcuts
-macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ,s "<change-folder>imaps://crobin.net/INBOX/Sent<enter>" "Go to sent mail"
-macro index,pager ,m "<change-folder>imaps://crobin.net/INBOX/Archives<enter>" "Go to Archives mail box"
-macro index,pager A "<save-message>imaps://crobin.net/INBOX/Archives<enter>" "Archive Message"
 
 # Set alternate (other adresses that are me)
 alternates "cyril.robin@ensta.org"

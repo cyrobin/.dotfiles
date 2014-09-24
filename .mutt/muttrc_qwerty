@@ -37,8 +37,10 @@ bind  index,pager J sidebar-next
 macro index,pager ,h ":toggle sidebar_visible<enter>" "Hide Sidebar"
 
 # Move
-macro index,pager ,i "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ,s "<change-folder>=Sent<enter>" "Go to sent box"
+macro index,pager ,i "<change-folder>$spoolfile<enter>"     "Go to inbox"
+macro index,pager ,s "<change-folder>$record<enter>"        "Go to sent box"
+macro index,pager ,m "<change-folder>$mbox<enter>"          "Go to Archives mail box"
+macro index,pager  A "<save-message>$mbox<enter><enter>"    "Archive Message"
 
 # alias
 # modify and then reload the alias file
