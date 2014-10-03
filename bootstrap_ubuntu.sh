@@ -27,6 +27,13 @@ offlineimap msmtp \
 gparted unetbootin \
 calibre synaptic p7zip-rar \
 python-numpy python3-numpy \
+python-all-dev python3-all-dev \
+python-doc python3-doc \
+python-matplotlib python3-matplotlib \
+python-gdal python3-gdal \
+ipython ipython3 python-ipdb python3-ipdb \
+ipython-doc \
+gdal-bin \
 inkscape \
 vlc
 
