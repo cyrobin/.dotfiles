@@ -27,7 +27,8 @@ offlineimap msmtp \
 gparted unetbootin \
 calibre synaptic p7zip-rar \
 python-numpy python3-numpy \
-inkscape
+inkscape \
+vlc
 
 ###### Remove unused packages
 #echo "*** Purging other packages..."
