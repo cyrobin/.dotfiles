@@ -67,7 +67,7 @@ set sendmail = "~/.mutt/CheckAttach.zsh /usr/bin/sendmail -oem -oi"
 # Display
 set smart_wrap=yes
 set markers=no
-set pager_context = 5
+set pager_context = 8
 set pager_index_lines = 10
 #set index_format="%4C %{%b %d} %-20.20L (%2E) %4c %s"
 set index_format="%4C %{%b %d} %-20.20F (%2E) %4c %s"
