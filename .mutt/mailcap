@@ -26,3 +26,7 @@ application/vnd.ms-powerpoint;	~/.mutt/mutt_bgrun libreoffice %s; test RunningX;
 #application/vnd.msword;		word2text %s; copiousoutput
 
 
+application/vnd.oasis.opendocument.text; ~/.mutt/mutt_bgrun libreoffice %s; test RunningX; needsterminal &;
+
+
+
