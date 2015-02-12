@@ -16,7 +16,8 @@ bind index k tag-entry
 bind index K tag-pattern
 bind index ,K untag-pattern
 bind index ,k tag-thread
-bind pager,index é save-message
+#bind pager,index é save-message
+macro pager,index é <save-message><kill-line>
 
 bind  index,pager S sidebar-prev
 bind  index,pager T sidebar-next
