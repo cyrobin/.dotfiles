@@ -165,6 +165,12 @@ bindkey -v
 # tu rencontres telle sequence de caractere, tu dois faire telle action.
 # La liste des actions est disponible dans "man zshzle".
 
+# Hack for zle bug 
+# see https://github.com/robbyrussell/oh-my-zsh/pull/3610
+TRAPWINCH() {
+  zle && { zle reset-prompt; zle -R }
+}
+
 # Correspondance touches-fonction
 bindkey ''    beginning-of-line       # Home
 bindkey "\e[1~" beginning-of-line
@@ -506,3 +512,5 @@ export PYTHONPATH="${HOME}/dev/lib/python2.7/site-packages:${HOME}/dev/lib/pytho
 
 # Prolog : eclipse
 export PATH=$PATH:/home/crobin/dev/src/eclipse_prolog/bin/x86_64_linux
+
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib"
